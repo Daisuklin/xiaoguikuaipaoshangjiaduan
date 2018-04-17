@@ -1,0 +1,74 @@
+错失  14:32:47
+
+＊琉璃～  14:37:05
+if ([mallOrder.state_desc isEqualToString:@"待付款"]) {
+[self.orderStatusButtonTwo setTitle:@"取消订单" forState:UIControlStateNormal];
+[self.orderStatusButtonOne setTitle:@"去支付" forState:UIControlStateNormal];
+}else if ([mallOrder.state_desc isEqualToString:@"已退款"]||[mallOrder.state_desc isEqualToString:@"已退货"]) {
+self.orderStatusButtonTwo.hidden = YES;
+self.orderStatusButtonOne.hidden = YES;
+self.bottomView.hidden = YES;
+self.bottomHeigt.constant = 0;
+self.oderStatus.textColor = HEXColor(0x999999);
+
+}else if ([mallOrder.state_desc isEqualToString:@"已取消"]){
+
+[self.orderStatusButtonOne setTitle:@"重新购买" forState:UIControlStateNormal];
+self.orderStatusButtonTwo.hidden = YES;
+self.oderStatus.textColor = HEXColor(0x999999);
+
+}else if ([mallOrder.state_desc isEqualToString:@"待接单"]||[mallOrder.state_desc isEqualToString:@"待发货"]|| [mallOrder.state_desc isEqualToString:@"拣货中"]||[mallOrder.state_desc isEqualToString:@"待自提"]) {
+
+    [self.orderStatusButtonTwo setTitle:@"申请退款" forState:UIControlStateNormal];
+    if ([mallOrder.state_desc isEqualToString:@"待发货"]) {
+        [self.orderStatusButtonOne setTitle:@"催单" forState:
+        UIControlStateNormal];
+    }else {
+        [self.orderStatusButtonOne setTitle:@"联系商家" forState:
+        UIControlStateNormal];
+
+    }
+
+
+}else if ([mallOrder.state_desc isEqualToString:@"待收货"]) {
+if (mallOrder.orderStatus >2) {
+[self.orderStatusButtonTwo setTitle:@"申请退货" forState:UIControlStateNormal];
+[self.orderStatusButtonOne setTitle:@"确认收货" forState:UIControlStateNormal];
+}else  {
+[self.orderStatusButtonOne setTitle:@"申请退款" forState:UIControlStateNormal];
+self.orderStatusButtonTwo.hidden = YES;
+}
+
+
+}else if ( [mallOrder.state_desc isEqualToString:@"已完成"]) {
+[self.orderStatusButtonTwo setTitle:@"再来一单" forState:UIControlStateNormal];
+
+self.oderStatus.textColor = HEXColor(0x999999);
+
+if ([mallOrder.evaluation_state isEqualToString:@"未评价"]) {
+
+[self.orderStatusButtonOne setTitle:@"评价" forState:UIControlStateNormal];
+}else {
+[self.orderStatusButtonOne setTitle:@"已评价" forState:UIControlStateNormal];
+}
+//        self.orderStatusButtonOne.backgroundColor = HEXColor(0xffba34);
+
+}else if ([mallOrder.state_desc isEqualToString:@"退款中"]||[mallOrder.state_desc isEqualToString:@"仲裁中"]||[mallOrder.state_desc isEqualToString:@"退货中"]) {
+[self.orderStatusButtonTwo setTitle:@"联系商家" forState:UIControlStateNormal];
+[self.orderStatusButtonOne setTitle:@"联系客服" forState:UIControlStateNormal];
+
+}else if ([mallOrder.state_desc isEqualToString:@"待拼团"]) {
+[self.orderStatusButtonTwo setTitle:@"邀请参团" forState:UIControlStateNormal];
+//             self.orderStatusButtonTwo.backgroundColor = HEXColor(0x1d97cc);
+[self.orderStatusButtonOne setTitle:@"取消拼团" forState:UIControlStateNormal];
+
+}else if ([mallOrder.state_desc isEqualToString:@"退款失败"] ||[mallOrder.state_desc isEqualToString:@"退货失败"]) {
+self.orderStatusButtonTwo.hidden = YES;
+[self.orderStatusButtonOne setTitle:@"联系客服" forState:UIControlStateNormal];
+
+
+}else if ([mallOrder.state_desc isEqualToString:@"待验货"]) {
+self.orderStatusButtonTwo.hidden = YES;
+[self.orderStatusButtonOne setTitle:@"申请退款" forState:UIControlStateNormal];
+}
+    

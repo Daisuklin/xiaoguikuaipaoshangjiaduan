@@ -1,0 +1,21 @@
+
+.login_index{ 
+    background-image:linear-gradient( #BAE8E8, #F5D6D3);
+    text-align: center;
+    height: 100vh;
+    width:100vw;
+    position: relative
+  }
+  .login_index .backgroundImg{ 
+    width:82vw; margin-top: 21.86vw; height: 112.26vw;}
+    
+  .login_index .logincontiner{
+    height:44.266 vw; top:66.13vw; 
+   position: absolute;left: 50%; width:46.5199vw; margin-left: -23.259vw;}
+
+.login_index .temp_login_logo{width:27.466vw; margin: 0 auto; height:17.33vw; }
+.login_index .appName{font-size:4.26vw; color:#5DD9AB; }
+.login_index .loginBtn{ width:100%; margin-top:11.666vw; height:11.666vw; line-height: 11.666vw; background: #5DD9AB; color:#fff;border-radius: 1.33vw; }
+.login_index .loginBtn button{ height:11.666vw; line-height: 11.666vw;background: transparent; color:#fff; border-radius:1.33vw; }
+.login_index .loginBtn button image{width:7.33vw;margin-right:2vw; height: 5.86vw; vertical-align: middle }
+.login_index .loginBtn button text{ height:11.666vw; line-height: 11.666vw;}

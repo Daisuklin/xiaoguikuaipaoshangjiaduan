@@ -1,0 +1,52 @@
+<!--pages/login/login.wxml-->
+ <view class="container"> 
+<!-- <view > -->
+  <view class="userinfo">
+     <button wx:if="{{!isLogin}}"  class='loginBtn' open-type="getUserInfo" bindgetuserinfo='getUserInfo'>
+         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+     </button>
+      <button wx:if="{{isLogin}}"  class='loginBtn'>
+         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+          <text class="userinfo-nickname">{{memberInfo.store_name}}</text>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+     </button>
+  </view>
+  <view class='btn_view' wx:if="{{isCatchGoods}}" bindtap='toCatchGoodsList'>
+    <image src='/image/center/1.png'></image>
+    <text>拣货列表</text>
+  </view>
+  <view class='btn_view' wx:if="{{isCheckGoods}}"  bindtap='SearchQrCode'>
+    <image  src='/image/center/2.png'></image>
+    <text>扫码验货</text>
+  </view>
+  <view class='btn_view inputOrder' wx:if="{{isCheckGoods}}"   bindtap='toInputOrderNum'>
+    <image  src='/image/center/3.png'></image>
+    <text>输单验货</text>
+  </view>
+  <view wx:if="{{showInputOrderNumWindow}}" class='inputOrderNumWindwo'>
+      <view class='title'>
+            输单验货
+      </view>
+    <view class='inputOrderNumBox g-clr'>
+        <input class='orderNumInput' bindinput="bindKeyInput" type='number' placeholder='请输入订单编号，如#1' value='{{inputOrderNum}}'></input>
+    </view>
+    <view class='controllerBtns g-clr'>
+          <button class='inputOrderNumWindwoCloseBtn' bindtap='inputOrderNumWindwoClearFun'>取消</button>
+          <button class='inputOrderNumWindwoSubmitBtn' bindtap='inputOrderNumWindwoSubmitBtnFun'>确定</button>
+    </view>
+
+  </view>
+  <view class='btn_view orderDetail'  bindtap='toOrderDetail'>
+    <image  src='/image/center/4.png'></image>
+    <text>订单详情</text>
+  </view>
+  <view class='btn_view makePhoneCall' bindtap='toServiceTel'>
+    <image  src='/image/center/5.png'></image>
+    <text>客服电话：400-660-9727</text>
+  </view>
+  <view class='btn_view clearUserInfoBtn' bindtap='clearUserInfoBtn'>
+     <button class='clearUserInfo' hidden='{{!isLogin}}'>退出登录</button>
+  </view>
+  <view wx:if="{{showInputOrderNumWindow}}"  bindtap='inputOrderNumWindwoClearFun'  class='index_bg'></view>  
+</view>

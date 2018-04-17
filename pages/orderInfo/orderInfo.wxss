@@ -1,0 +1,32 @@
+.floL{float: left;}
+.floR{float: right;}
+.g-clr:after {
+  width: 100%;
+  clear: both;
+  content: '';
+  zoom: 1;
+  display: block;
+}
+
+.orderInfobox{background: #fff}
+.orderInfobox .userInfo{background: #fff}
+.orderInfobox .userInfo .username{background: #fff}
+.orderInfobox .userInfo .orderSN{background: #fff}
+.orderInfobox .orderItemBox{background: #fff;height: 80vh;}
+.orderInfobox .orderItemBox .goodItemTitle{background: #fff}
+.orderInfobox .orderItemBox .goodItemTitle .goodName{width: 45vw; text-align: center;display:block;}
+.orderInfobox .orderItemBox .goodItemTitle .goodCount{width: 15vw;text-align: center;display:block;}
+.orderInfobox .orderItemBox .goodItemTitle .goods_price{width: 15vw;text-align: center;display:block;}
+.orderInfobox .orderItemBox .goodItemTitle .goods_statu{width: 25vw;text-align: center;display:block;}
+
+
+.orderInfobox .orderItemBox .goodItem{background: #fff}
+.orderInfobox .orderItemBox .goodItem .goodName{width: 45vw; text-align: center;display:block;}
+.orderInfobox .orderItemBox .goodItem .goodCount{width: 15vw;text-align: center;display:block;}
+.orderInfobox .orderItemBox .goodItem .goods_price{width: 15vw;text-align: center;display:block;}
+.orderInfobox .orderItemBox .goodItem .goods_statu{width: 25vw;text-align: center;display:block;}
+
+.orderInfobox .orderBtns{position:fixed; bottom: 0;left: 0}
+.orderInfobox .orderBtns button{float:left;width: 50vw; height: 10vh；}
+.orderInfobox .searchBtns{position:fixed; bottom: 0;left: 0}
+.orderInfobox .searchBtns button{width:100vw; height: 10vh；}

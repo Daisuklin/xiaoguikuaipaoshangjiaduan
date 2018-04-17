@@ -1,0 +1,51 @@
+/* pages/carchOrderList/catchOrderDetail/catchOrderDetail.wxss */
+@import "../css/bean.wxss";
+page{background: #F8F8F8 }
+view.orderDetailTop{color:#444444; width: 100vw; margin: 2.666vw auto;font-size:4vw; background: #fff; margin-bottom: 7.333vw;}
+view.orderDetailTop view{padding: 1vw 0;}
+view.orderDetailTop view:nth-child(1){padding-top:4vw;}
+view.orderDetailTop view:nth-last-child(1){padding-bottom:4vw;}
+view.orderDetailTop .title{padding-left:4vw ; color:#999999; display: inline-block;width: 23.8666vw; text-align: left;}
+
+.dl{height:82.666vw; background: #fff;}
+.dl .dt{height:10.5333vw; background: #fff;  line-height:10.5333vw; border-bottom: 1px solid #E5E5E5;  }
+.dl .dt text{display:block ; float: left; font-size:5.73333vw;text-align: center;color:#000000;}
+.dl .dt text:nth-child(1){width:38.8vw;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.dl .dt text:nth-child(2){width:20.133vw;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.dl .dt text:nth-child(3){width:20.133vw;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.dl .dt text:nth-child(4){width:20.133vw;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.dl .dd{min-height:17.2vw; width: 96vw; margin: 0 auto; border-bottom: 1px solid #E5E5E5;}
+.dl .dd text{color:#444444 ; display: block; float: left;padding: 3.1vw 0; text-align: center;}
+.dl .dd text:nth-child(1){min-height:17.2vw; padding:0;width:38.8vw; font-size: 4vw; text-align: left;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.serialTxt{margin-right: 2vw;}
+
+.dl .dd text:nth-child(2){width:20.133vw;font-size: 3.2vw; color:#999999;
+ 
+min-height:17.2vw;
+padding:0;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;
+}
+.dl .dd text:nth-child(3){width:16.133vw;font-size: 4vw;
+min-height:17.2vw;
+padding:0;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;
+}
+.dl .dd text:nth-child(4){width:20.133vw; font-size: 4vw;
+min-height:17.2vw;
+padding:0;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center; -ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;
+}
+.dl .dd text:nth-child(4).error{color:#E5004F;}
+.dl .dd text:nth-child(4).ok{color:#5DD9AB;}
+
+.footer{height:26.4vw; background: #fff; position: fixed; bottom: 0; left: 0; width: 100vw;}
+.footer .inputBox{height:13.3333vw; width:ba 94.66666vw;background: #fff; margin: 0 auto;}
+.footer .inputBox .barCode{height:8vw; width: 73.3333vw; background:#EEEEEE; font-size: 4vw; margin:2.666665vw 0 2.666665vw 2.5vw;text-align: center; border-radius: 5px; color:#999999;}
+.footer .inputBox .input_SubmitBtn{line-height:8vw; width: 17.3333vw; background:#999999; font-size: 4vw; margin: 2.666665vw  0 2.666665vw  4vw; text-align: center; border-radius: 5px; color:#fff;}
+
+.footer .operationBox{height:13.3333vw; width: 100vw;}
+.footer .operationBox button{height:13.3333vw;line-height:13.3333vw; width: 50vw; border-radius: 0; float: left;}
+.footer .operationBox button image{width:5.3333vw;height:5.3333vw; vertical-align: middle;margin-right: 2vw;}
+.footer .operationBox button:nth-child(2){ background: #5DD9AB;color:#fff;}
+
+
+.footer_zt{height:16.4vw; background: #fff; position: fixed; bottom: 0; left: 0; width: 100vw; text-align: center}
+.footer_zt .inputBox{text-align: center;}
+.footer_zt .yhtd_input{height:12vw; width:80vw; background:green; font-size:5vw; margin-top: 2.666665vw ; text-align: center; border-radius: 5px; color:#fff; }

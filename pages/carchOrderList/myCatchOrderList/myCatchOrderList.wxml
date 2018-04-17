@@ -1,0 +1,38 @@
+<view  class='pageView' >
+  <view class='nav_titles g-clr'>
+    <navigator open-type="redirect" hover-class="other-navigator-hover" url="/pages/carchOrderList/carchOrderList" >可拣货</navigator>
+    <navigator  class='on' open-type="redirect" hover-class="other-navigator-hover" url="/pages/carchOrderList/myCatchOrderList/myCatchOrderList" >进行中</navigator>
+  </view>
+  <scroll-view class='catchContent' scroll-y="true"   bindscrolltolower="lower" >
+    <view  class='nullcontent' wx:if="{{orderList.length==0}}">无进行中订单</view> 
+   <block wx:for="{{orderList}}"  wx:for-item="order">
+    
+    <view  class='orderItem'>
+      <view class='g-clr orderItem_top' id='{{order.order_id}}' bindtap='setCatchOrderToUser'>
+          <view class=' orderShortNum'>#{{order.order_serial}}</view>
+          <view class=' orderNumberInfo'>
+              <rich-text class='orderDetailNum'>订单号: {{order.order_sn}}</rich-text>
+              <rich-text class='orderCreateTime'>{{order.date_time}}</rich-text>
+          </view>
+          <view class='fltR'>
+            <text class='orderState'>{{order.state_desc}}></text>
+          </view>
+      </view>
+      <view class='orderItemContent' id='{{order.order_id}}' bindtap='setCatchOrderToUser'>
+         <block wx:for="{{order.extend_order_goods}}" wx:for-index="good_index"  wx:for-item="good">
+           <rich-text wx:if="{{good_index<=2}}"  class='goodsInfo'>{{good.goods_name}}</rich-text>
+           <rich-text wx:if="{{good_index>2&&good_index<=3}}" class='goodsInfo'>...</rich-text>
+         </block>
+          <rich-text class='goodsCount'>等{{order.goods_total_num}}件商品</rich-text>
+      </view>
+      <view class='orderItemFooter'>
+        <button class='catchBtn'  data-sn='{{order.order_sn}}'  id='{{order.order_id}}' bindtap='setCatchOrderToUser'>继续拣货</button>
+        <button class='removeBtn' data-sn='{{order.order_sn}}'  id='{{order.order_id}}' bindtap='remvoeCatchOrder'>取消拣货</button>
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+  <view class='orderCollectbox'>
+      <button class='btn_orderCollect' bindtap='toOrderCollect' >订单商品汇总</button>
+  </view>
+</view>

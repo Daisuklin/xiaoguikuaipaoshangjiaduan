@@ -1,0 +1,46 @@
+<!--pages/carchOrderList/catchOrderDetail/catchOrderDetail.wxml-->
+<view>
+  <view class='orderDetailTop'>
+      <view>
+        <text  class='title'>订单号</text><text>{{order.order_sn}}</text>
+      </view>
+      <view>
+        <text class='title'>拣货员</text><text>{{order.packer}}</text>
+      </view>
+      <view>
+        <text class='title'>订单时间</text><text>{{order.date_time}}</text>
+      </view>
+      <view>
+        <text class='title'>支付状态</text><text>{{order.pay_str}}</text>
+      </view>
+    </view>
+    <scroll-view class='dl' scroll-y="true" >
+      <view class='dt g-clr'>
+        <text>商品名称</text>
+        <text>规格</text>
+        <text>数量</text>
+        <text>审核</text>
+      </view>
+       <block wx:for="{{order.extend_order_goods}}"  wx:for-item="good">
+          <view class='dd  g-clr'>
+            <text class='goods_name'>{{good.goods_name!=null?good.goods_name:""}}</text>
+            <text class='goods_spec'>{{good.goods_spec!=null?good.goods_spec:""}}</text>
+            <text class='goods_num'>{{good.goods_num}}</text>
+            <text class='{{(good.checkCount==good.goods_num)?"ok":"error"}}'>{{good.checkCount}}</text>
+          </view>
+       </block>
+    </scroll-view>
+    <view class='footer'>
+      <view class='inputBox  g-clr'>
+       <input class='barCode fltL'   placeholder="扫不出条码，试试手动输入"  bindinput="bindKeyInput" value='{{inputValue}}' />
+       <button class='input_SubmitBtn fltL' bindtap='submitBarCodeBtn'>确认</button>
+      </view>
+      <view class='operationBox g-clr'>
+        <button class='operation'  bindtap='SearchQrCode'>
+          <image src='/image/goods/searchIcon.png'></image>
+          扫描商品
+        </button>
+        <button class='operation'  bindtap='changeOrderStatus'>拣货完成</button>
+      </view>
+    </view>
+</view>

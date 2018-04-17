@@ -1,0 +1,39 @@
+<view>
+  <view class='orderDetailTop'>
+      <view>
+        <text  class='title'>订单号汇总</text><rich-text bindtap='showOrderNumWindow' style='height:{{showOrderNumList?"auto":"7vw"}}'  nodes="{{orderNums}}" bindtap="tap"></rich-text><text class="more" bindtap='showOrderNumWindow'>{{(showOrderNumList?"∧":"∨")}}</text>
+      </view>
+      <view>
+        <text class='title'>拣货员</text><text>{{name}}</text>
+      </view>
+    </view>
+    <scroll-view class='dl' scroll-y="true" >
+      <view class='dt g-clr'>
+        <text>商品名称</text>
+        <text>规格</text>
+        <text>数量</text>
+        <text>审核</text>
+      </view>
+       <block wx:for="{{extend_order_goods}}"  wx:for-item="good">
+          <view class='dd  g-clr'>
+            <text class='goods_name'>{{good.goods_name}}</text>
+            <text class='goods_spec'>{{good.goods_spec==null?"":good.goods_spec}}</text>
+            <text class='goods_num'>{{good.goods_num}}</text>
+            <text class='{{(good.checkCount==good.goods_num)?"ok":"error"}}'>{{good.checkCount}}</text>
+          </view>
+       </block>
+    </scroll-view>
+    <view class='footer'>
+      <view class='inputBox  g-clr'>
+       <input class='barCode fltL'   placeholder="扫不出条码，试试手动输入"  bindinput="bindKeyInput" value='{{inputValue}}' />
+       <button class='input_SubmitBtn fltL' bindtap='submitBarCodeBtn'>确认</button>
+      </view>
+      <view class='operationBox g-clr'>
+        <button class='operation'  bindtap='SearchQrCode'>
+          <image src='/image/goods/searchIcon.png'></image>
+          扫描商品
+        </button>
+      
+      </view>
+    </view>
+</view>

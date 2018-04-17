@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/login/index/index",
+    "pages/index/index",
+    "pages/login/bindPhone/bindPhone",
+    "pages/searchOrderByNum/searchOrderByNum",
+    "pages/orderInfo/orderInfo",
+    "pages/carchOrderList/carchOrderList",
+    "pages/carchOrderList/myCatchOrderList/myCatchOrderList",
+    "pages/carchOrderList/orderCollect/orderCollect",
+    "pages/carchOrderList/catchOrderDetail/catchOrderDetail",
+    "pages/orderDetailList/orderDetailList",
+    "pages/orderDetailList/orderDetailListAtIng/orderDetailListAtIng"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "商家职员",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

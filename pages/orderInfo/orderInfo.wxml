@@ -1,0 +1,29 @@
+<!--pages/orderInfo/orderInfo.wxml-->
+<view class='orderInfobox'>
+  <view class='userInfo'>
+    <rich-text class='username'>验单人：{{userInfo.nickName}}</rich-text>
+    <rich-text class='orderSN'>订单号：{{orderData.data.order_sn}}</rich-text>
+  </view>
+  <view class='orderItemBox'>
+    <view class="goodItemTitle g-clr">
+      <text class='floL goodName'>商品名称</text>
+      <text class='floL goodCount'>总数</text>
+      <text class='floL goods_price'>单价</text>
+      <text class='floL goods_statu'>审核</text>
+    </view>
+    <view class="goodItem g-clr" wx:for="{{orderData.data.extend_order_goods}}"  wx:for-index="index" wx:for-item="item">
+      <text class='floL goodName'>{{item.goods_name}}</text>
+      <text class='floL goodCount'>{{item.goods_num}}</text>
+      <text class='floL goods_price'>{{item.goods_price}}</text>
+      <text class='floL goods_statu'></text>
+    </view>
+  </view>
+  <view  wx:if="{{orderData}}" class="orderBtns g-clr">
+    <button class='btn_search'  bindtap='searchGoodId'>扫描商品</button>
+    <button bindtap='setCheckOrder'>确认审核</button>
+  </view>
+  <view class='searchBtns' wx:if="{{!orderData}}">
+    <button  class='btn_search' bindtap='searchOrderId'>扫描订单</button>
+  </view>
+</view>
+

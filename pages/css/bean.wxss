@@ -1,0 +1,14 @@
+.fltL {
+  float: left;
+}
+.fltR {
+  float: right;
+}
+.g-clr:after {
+  width: 100%;
+  clear: both;
+  content: '';
+  zoom: 1;
+  display: block;
+}
+button::after{border: none;}

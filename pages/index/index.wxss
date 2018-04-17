@@ -1,0 +1,42 @@
+/* pages/login/login.wxss */
+@import "../css/bean.wxss";
+ 
+.container{padding: 0; min-height: 100vh; width: 100vw; background-image:linear-gradient( #BAE8E8, #F5D6D3);overflow: hidden;}
+.userinfo{width: 100vw;text-align: center}
+.loginBtn{padding: 0;margin: 0;  background:transparent; width:100vw;padding-top:4vw; border: none;}
+.loginBtn::after{content:none; }
+.userinfo  .loginBtn image{background: transparent;  height:22.6666vw;width:22.6666vw; border-radius: 50%; line-height: 35vw;vertical-align: middle}
+.userinfo .loginBtn .userinfo-nickname{background: transparent;  height:4vw;line-height: 4vw; display: block;width: 100%; text-align: center; font-size: 4vw; color:#fff; margin: 3.33vw auto;}
+ 
+.btn_view{
+  text-indent: 6.6vw ;
+  width:80vw;
+  height: 15vw;
+  line-height: 15vw;
+  background: #fff;
+  margin:  0 auto 4vw;
+  overflow: hidden;
+  position: relative;
+} 
+.btn_view image{ position: absolute; width: 6.13vw;height:8.53vw; vertical-align:sub; top:3.6vw; left: 7.2vw; }
+.btn_view text{height: 16vw;line-height: 16vw; width:74vw; display: block; text-align: center;}
+.btn_view.inputOrder image{width:7.2vw;height:7.6vw;}
+.btn_view.orderDetail image{width:7.2vw;height:7.73vw;}
+.btn_view.makePhoneCall image{width:5.06vw;height:6.26vw; top:4.2vw;}
+.btn_view.makePhoneCall text{font-size:4vw; color:#444444;left:8vw;}
+
+.index_bg{height: 100vh; width: 100vw; background: rgba(0, 0, 0, 0.72); top: 0; left: 0; position: fixed;z-index: 9998;}
+.inputOrderNumWindwo{width: 100vw; height: 70vw; border-radius: 10px 10px 0 0 ; border:none;    position: absolute; left:0; bottom: 0;  background: #fff; z-index: 9999; }
+.inputOrderNumWindwo .title{background: #fff;line-height:15vw; text-align: center; color: #000; border-radius: 5px 5px 0 0; border-bottom: 1px solid #fff; font-size: 6vw;}
+.inputOrderNumWindwo .inputOrderNumBox{background: #fff; width: 90vw; margin: 5vw auto ;}
+.inputOrderNumWindwo .inputOrderNumBox .orderNumText{width: 25vw; display: block; float: left; line-height: 10vw;}
+.inputOrderNumWindwo .inputOrderNumBox .orderNumInput{width: 80vw; height: 15vw
+; display: block;line-height: 15vw; border:1px solid #444444; margin: 0 auto; text-align: center;background:rgba(238,238,238,1); color:#999999;font-size:6vw;
+}
+.inputOrderNumWindwo .controllerBtns{background: #fff}
+.inputOrderNumWindwo .controllerBtns button{width: 50vw; float: left; height: 10vw;margin-top:19vw
+; border-radius: 0;line-height: 10vw; }
+.inputOrderNumWindwo .controllerBtns button.inputOrderNumWindwoCloseBtn{background:#F8F8F8 ;}
+.inputOrderNumWindwo .controllerBtns button.inputOrderNumWindwoSubmitBtn{background:#5DD9AB; color:#fff;}
+.clearUserInfoBtn{ background: transparent;}
+.clearUserInfoBtn .clearUserInfo{ background:green; color:#fff;}

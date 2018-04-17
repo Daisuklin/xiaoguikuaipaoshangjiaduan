@@ -1,0 +1,39 @@
+/* pages/carchOrderList/carchOrderList.wxss */
+@import "../../css/bean.wxss";
+page{background: #F8F8F8;}
+.pageView{width:100vw;}
+.nav_titles{background: #fff;width:100vw;}
+.nav_titles navigator{display: block;float: left; width:20vw; text-align: center; font-size: 4.5333vw; height:13.333vw; line-height:13.333vw; }
+.nav_titles navigator:nth-child(1){margin-left:14.9333vw;margin-right:29.8666vw;   }
+.nav_titles navigator.on{color:#5DD9AB; border-bottom: 1px solid #5DD9AB;}
+.catchContent{
+  width:100vw;
+  margin:2.666vw auto;
+  height:81.116vh;
+}
+.catchContent .orderItem{ width:94.666vw; margin:0 auto 2.666vw;background: #fff;border-radius: 5px;}
+.catchContent .orderItem .orderItem_top{width:86.6666vw;margin: 0 auto;height: 14.5333vw;border-bottom: 1px solid #EEEEEE;  }
+.catchContent .orderItem .orderItem_top .orderShortNum{vertical-align: top; width:auto; padding:0 3vw 0 0;
+line-height: 14.5333vw; text-align: center;font-size:6.666vw; color:#5DD9AB;display:inline-block }
+.catchContent .orderItem .orderItem_top .orderNumberInfo{display: inline-block}
+.catchContent .orderItem .orderItem_top .orderDetailNum{width:57.9333vw; font-size: 4vw;height:7.26665vw;line-height:9.26665vw; display: block;overflow: hidden;text-overflow:ellipsis;
+white-space: nowrap;}
+.catchContent .orderItem .orderItem_top .orderCreateTime{width:57.9333vw;font-size: 3.6vw;height:7.26665vw;line-height:6.26665vw; display: block;overflow: hidden;text-overflow:ellipsis;
+white-space: nowrap;}
+.catchContent .orderItem .orderItem_top .orderState{line-height: 14.5333vw;font-size: 3.6vw;color:#999999;} 
+
+.catchContent .orderItem .orderItemContent{font-size:4vw;background: #fff;min-height:10vw;width:86.666vw; margin:0 auto; padding:4vw;}
+.catchContent .orderItem .orderItemContent .goodsInfo{
+  line-height:7vw;
+}
+.catchContent .orderItem .orderItemContent .goodsCount{
+  line-height:7vw;color:#999999; font-size:4vw;text-align: right;
+}
+.catchContent .orderItem .orderItemFooter{width:86.6666vw;margin: 0 auto;height:13.33vw;border-top: 1px solid #EEEEEE;text-align: right; }
+.catchContent .orderItem .orderItemFooter button{background:#5DD9AB;width:20vw;line-height:8vw;border:none;color:#fff;font-size:4vw;margin:2.5vw 0;padding:0;float:right;}
+
+.orderItemFooter .catchBtn:nth-child(1){background: #fff; border: 1px solid #999999;}
+.catchContent .orderItem .orderItemFooter button{background:#5DD9AB;width:20vw;line-height:8vw;border:1px solid #5DD9AB;color:#fff;font-size:4vw;margin:2.5vw 0;padding:0;float:right;}
+
+.catchContent .orderItem .orderItemFooter button.clearCheckOrder,.catchContent .orderItem .orderItemFooter button.clearCarchOrder{background: red; color:#fff;  margin-right:3vw; border:none; }
+.nullcontent{text-align: center;  background: #fff;height: 16vw; line-height: 16vw;}
